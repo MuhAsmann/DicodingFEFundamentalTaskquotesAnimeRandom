@@ -1,8 +1,10 @@
 import DataSource from "../data/data-source.js";
+import '../component/search-bar.js';
 
 const main = () => {
-  const searchElement = document.querySelector('#searchElement');
-  const buttonSearchElement = document.querySelector('#searchButtonElement');
+  const searchElement = document.querySelector('search-bar');
+  // dihapus karna sudah diterapkan pada component search-bar.js
+  // const buttonSearchElement = document.querySelector('#searchButtonElement');
   const clubListElement = document.querySelector('#clubList');
 
   // const onButtonSearchClicked = () => {
@@ -62,7 +64,7 @@ const main = () => {
     clubListElement.innerHTML += `<h2 class="placeholder">${message}</h2>`;
   };
 
-  buttonSearchElement.addEventListener('click', onButtonSearchClicked);
+  searchElement.clickEvent = onButtonSearchClicked;
 };
 
 export default main;
